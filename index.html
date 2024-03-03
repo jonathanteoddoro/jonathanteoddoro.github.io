@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skyUP - Jonathan </title>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.23.0/dist/phaser.js"></script>
+    <script src="cenas/inicio.js"></script> 
+    <script src="cenas/cena1.js"></script>
+    <script src="cenas/resultados.js"></script>
+    <script src="cenas/gameover.js"></script>
+   
+
+
+
+    </script>
+</head>
+<body>
+    <script>
+        var config = {
+    width: 800,
+    height: 900,
+    physics: {
+        default: 'arcade',
+       arcade:{
+        gravity:{ y:  200},
+        debug: false
+       }
+    },
+    scene: [Inicio, Cena1, Resultados, GameOver] 
+}
+
+const game = new Phaser.Game(config);
+game.scene.start('Inicio');
+    </script>
+</body>
+</html>
