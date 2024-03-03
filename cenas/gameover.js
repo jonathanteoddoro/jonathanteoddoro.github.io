@@ -28,6 +28,8 @@ class GameOver extends Phaser.Scene {
         // Define o evento de clique para reiniciar o jogo ao clicar no botão "Try Again"
         this.botaoTryAgain.on('pointerup', () => {
             this.scene.start('Cena1'); // Reinicia a cena do jogo
+            pontuacao = 0
+            placar.setText(`ESTRELAS COLETADAS: ${pontuacao}`);
         });
     }
 }
